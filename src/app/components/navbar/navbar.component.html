@@ -1,0 +1,7 @@
+<div class="navbar">
+  <a href="/">BonoBuddy</a>
+  <a *ngIf="currentUser == null" href="/#/login">Login</a>
+  <a *ngIf="currentUser?.email == 'paulaschneider@gmail.com'" href="/#/client">Profil</a>
+  <a *ngIf="currentUser?.email == 'michaelbauer@kanzleibauer.com'" href="/#/lawyer">Profil</a>
+  <a *ngIf="currentUser?.email" (click)="logout()" href="/**">Abmelden</a>
+</div>

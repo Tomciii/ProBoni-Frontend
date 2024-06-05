@@ -1,0 +1,33 @@
+<body>
+<div class="container mb_500">
+
+  <mat-card *ngIf="currentUser == null">
+    <mat-card-title>Willkommen zu BonoBuddy</mat-card-title>
+    <p style="margin-bottom: 40px">Holen Sie sich jetzt kostenlose Unterstützung für Ihren Fall!
+      Um unser Angebot nutzen zu können, müssen Sie angemeldet sein.
+      Melden Sie sich hierfür an, oder registrieren Sie sich, falls sie noch kein Konto besitzen.</p>
+    <div class="mb_10">
+      <button class="mr_10" [routerLink]="['/login']">Login</button>
+      <button [routerLink]="['/register']">Registrieren</button>
+    </div>
+  </mat-card>
+
+  <mat-card *ngIf="currentUser">
+    <mat-card-title>Willkommen, {{currentUser.firstName}} {{currentUser.lastName}}!</mat-card-title>
+    <div *ngIf="currentUser.email === 'paulaschneider@gmail.com'">
+      <p  style="margin-bottom: 40px">Holen Sie sich jetzt kostenlose Unterstützung für Ihren Fall!
+        Um unser Angebot nutzen zu können, müssen Sie angemeldet sein.
+        Melden Sie sich hierfür an, oder registrieren Sie sich, falls sie noch kein Konto besitzen.</p>
+
+      <button *ngIf="currentUser.email === 'paulaschneider@gmail.com'" [routerLink]="['/client']">Profil</button>
+    </div>
+
+    <div  *ngIf="currentUser.email === 'michaelbauer@kanzleibauer.com'">
+      <p style="margin-bottom: 40px">Unterstützen Sie Menschen in Not!</p>
+      <button *ngIf="currentUser.email === 'michaelbauer@kanzleibauer.com'" [routerLink]="['/lawyer']">Profil</button>
+    </div>
+  </mat-card>
+
+  <lawyers-table></lawyers-table>
+</div>
+</body>

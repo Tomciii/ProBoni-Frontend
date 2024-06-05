@@ -1,0 +1,11 @@
+<div class="scrollable-container">
+  <mat-card *ngFor="let item of items" class="gallery-card" (click)="navigateToOpenCase()">
+    <mat-card-header style=" background-color: aliceblue">
+      {{ item.area }}
+    </mat-card-header>
+    <mat-card-title style="margin-left: 14px">{{ item.title }}</mat-card-title>
+    <mat-card-content class="cardcontent">
+      {{ item.description }}
+    </mat-card-content>
+  </mat-card>
+</div>

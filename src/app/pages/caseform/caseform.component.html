@@ -1,0 +1,27 @@
+<div class="form-container mb_500">
+  <h1>Neuen Fall anlegen</h1>
+
+  <mat-card class="warn">
+    <h3>Achtung</h3>
+    <p>Der Vertrag zwischen Ihnen und dem Anwalt kommt nicht über unsere Plattform zustande.
+      Jegliche Details diesbezüglich müssen mit dem Anwalt selbst besprochen werden.<br><br>
+      Der übermittelte Text darf keine persönlichen Daten, Werbungen, Beleidigungen, oder Ähnliches enthalten.</p>
+  </mat-card>
+
+
+  <label for="title">Titel/ Rechtliche Frage:</label>
+  <input type="text" id="title" [(ngModel)]="submitDTO.title" />
+
+  <label for="description">Beschreibung:</label>
+  <textarea rows="5" class="textarea" id="description" [(ngModel)]="submitDTO.description" placeholder="Bitte beschreiben Sie Ihren Fall möglichst kurz und präzise."></textarea>
+
+  <label for="area">Fachgebiet:</label>
+  <select id="area" [(ngModel)]="selectedArea">
+    <option disabled selected value="-1">Wählen Sie einen Fachbereich aus.</option>
+    <option *ngFor="let area of areas" [value]="area.id">{{ area.name }}</option>
+  </select>
+
+
+  <button (click)="submitCase()">Neuen Fall anlegen</button>
+
+</div>

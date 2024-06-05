@@ -1,0 +1,6 @@
+<div class="mb_500">
+  <h2 class="mt_20">Willkommen {{currentUser?.firstName}} {{currentUser?.lastName}}</h2>
+  <h1 style="margin-bottom: 30px;">Meine Fälle</h1>
+  <cases-table></cases-table>
+  <button [routerLink]="['/client/newcase']" style="margin-top: 35px">Neuen Fall anlegen</button>
+</div>

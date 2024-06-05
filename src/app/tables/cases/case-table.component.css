@@ -1,0 +1,20 @@
+.demo-table {
+  width: 100%;
+}
+
+.mat-mdc-row .mat-mdc-cell {
+  border-bottom: 1px solid transparent;
+  border-top: 1px solid transparent;
+  cursor: pointer;
+}
+
+.mat-mdc-row:hover .mat-mdc-cell {
+  border-color: currentColor;
+}
+
+th[mat-header-cell] {
+  background-color: #cedcf0;
+}
+tr:nth-child(even) {
+  background-color: #f7feff;
+}

@@ -1,0 +1,53 @@
+.form-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 50px auto 0 auto;
+  align-content: center;
+}
+
+
+.warn p {
+  max-width: 500px;
+  margin: 0 auto;
+  font-size: 14px;
+}
+
+h3 {
+  color: #750202;
+}
+div {
+  width: 300px;
+}
+
+mat-card {
+  width: 625px;
+  margin-top: 10px;
+  margin-bottom: 25px;
+  padding: 20px;
+  background-color: #ffe3e3;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+input, textarea, mat-form-field, select {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 20px;
+}
+
+.textarea {
+  resize: none;
+}
+
+textarea, input, select {
+  width: 600px;
+}
+
+button {
+  margin-bottom: 20px;
+}

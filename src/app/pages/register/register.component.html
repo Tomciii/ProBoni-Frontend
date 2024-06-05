@@ -1,0 +1,69 @@
+<div class="form-container mb_500">
+  <h1>Registrieren</h1>
+  <!-- Step 1: User Type -->
+  <mat-card *ngIf="step === 1">
+      <h2>Schritt 1: Benutzertyp auswählen</h2>
+      <div class="flex radiobuttons">
+        <div class="flex">
+          <input type="radio" id="mandant" name="usertype" [value]="false" [(ngModel)]="registerDTO.isLawyer">
+          <label for="mandant">Mandant</label>
+        </div>
+
+        <div class="flex">
+          <input type="radio" id="anwalt" name="usertype" [value]="true" [(ngModel)]="registerDTO.isLawyer">
+          <label for="anwalt">Anwalt</label>
+        </div>
+      </div>
+      <button (click)="nextStep()">Weiter</button>
+  </mat-card>
+
+  <mat-card *ngIf="step === 2">
+    <h2>Schritt 2: Benutzerdetails eingeben</h2>
+
+
+    <label for="userName">Benutzername:</label>
+    <input type="text" id="userName" [(ngModel)]="registerDTO.userName" />
+
+    <label for="password">Passwort:</label>
+    <input type="password" id="password" [(ngModel)]="registerDTO.password" />
+
+    <button (click)="nextStep()">Weiter</button>
+    <button (click)="prevStep()">Zurück</button>
+  </mat-card>
+
+  <!-- Step 2: User Details -->
+  <mat-card *ngIf="step === 3">
+    <h2>Schritt 3: Benutzerdetails eingeben</h2>
+    <label for="firstName">Vorname:</label>
+    <input type="text" id="firstName" [(ngModel)]="registerDTO.firstName" />
+
+    <label for="lastName">Nachname:</label>
+    <input type="text" id="lastName" [(ngModel)]="registerDTO.lastName" />
+
+    <label for="dateOfBirth">Geburtsdatum:</label>
+    <input type="date" id="dateOfBirth" [(ngModel)]="registerDTO.dateOfBirth" />
+
+    <label for="phoneNumber">Telefonnummer:</label>
+    <input type="text" id="phoneNumber" [(ngModel)]="registerDTO.phoneNumber" />
+
+    <label for="address">Adresse:</label>
+    <input type="text" id="address" [(ngModel)]="registerDTO.address" />
+
+    <button *ngIf="isLawyer()" (click)="nextStep()">Weiter</button>
+    <button *ngIf="!isLawyer()" (click)="register()">Registrieren</button>
+    <button (click)="prevStep()">Zurück</button>
+  </mat-card>
+
+  <!-- Step 3: Additional Details -->
+  <mat-card *ngIf="step === 4">
+    <h2>Schritt 4: Anwaltdetails eingeben</h2>
+    <label for="advmcode">ADVM Code:</label>
+    <input type="text" id="advmcode" [(ngModel)]="registerDTO.advmCode" />
+
+    <label   for="organisationId">Organisation ID:</label>
+    <input   type="text" id="organisationId" [(ngModel)]="registerDTO.organisationId" />
+
+    <button (click)="register()">Registrieren</button>
+    <button (click)="prevStep()">Zurück</button>
+  </mat-card>
+</div>

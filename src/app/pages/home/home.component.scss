@@ -1,0 +1,22 @@
+body {
+  text-align: center;
+  margin: 20px;
+  color: #333;
+}
+h1, p {
+  margin: 10px;
+}
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+mat-card {
+  padding: 30px;
+  margin-bottom: 20px
+}
+
+mat-card-title {
+  font-size: 25pt;
+  margin-bottom: 20px;
+}

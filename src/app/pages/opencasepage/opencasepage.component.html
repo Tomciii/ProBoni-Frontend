@@ -1,0 +1,29 @@
+<div class="flex">
+  <h2>Fehlerhafte medizinische Behandlung</h2>
+  <div class="casestatus"><h3 class="stateheading">Status:</h3><p id="status">{{ status }}</p></div>
+  <div class="casestatus">
+    <h3 class="stateheading">Fachbereich: </h3>
+    <p id="area">{{area}}</p>
+  </div>
+  <div class="contacts">
+    <div class="contact">
+      <h4>Mandant</h4>
+      <p>User Mark Hauser am 07.05.2024</p>
+      <p>Email: mark.hauser@outlook.de</p>
+      <p>Telefon: +43 6645435784</p>
+    </div>
+    <div class="contact">
+      <h4>Bearbeiter</h4>
+      <p>Offen (Nicht zugewiesen)</p>
+    </div>
+  </div>
+
+  <h3>Fallbeschreibung</h3>
+  <p style="width: 800px; margin: auto">Ich bin ein Patient, der nach einer fehlerhaften medizinischen Behandlung in einem Krankenhaus ernsthafte gesundheitliche Probleme erleidet. Mir wurde eine falsche Medikation verabreicht, was zu langfristigen Nebenwirkungen geführt hat. Aufgrund meiner begrenzten finanziellen Mittel ist es eine Herausforderung, rechtliche Schritte einzuleiten, um eine Entschädigung zu fordern und sicherzustellen, dass mir Gerechtigkeit widerfährt.</p>
+
+  <div>
+    <button (click)="back()" style="margin-right: 10px;">Zurück</button>
+    <button (click)="cancel()">Fall annehmen</button>
+  </div>
+
+</div>

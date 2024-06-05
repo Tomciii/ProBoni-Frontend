@@ -1,0 +1,42 @@
+p, h3, h2, h4 {
+  padding-bottom: 15px;
+}
+
+.flex {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 auto;
+}
+h2 {
+  padding-top: 15px;
+}
+
+.contacts {
+  display: flex;
+  flex-direction: row;
+  gap:20px;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.contact {
+  width: 400px;
+  border: 2px solid #384557;
+  border-radius: 5px;
+  background-color: #eef0f3;
+}
+
+button {
+  margin-bottom: 20px;
+}
+
+.casestatus {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.stateheading {
+  margin-right: 5px;
+}

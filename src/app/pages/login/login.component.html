@@ -1,0 +1,15 @@
+<div class="form-container mb_500">
+
+  <h1>Login</h1>
+  <mat-card>
+    <div>
+      <label for="email">Email:</label>
+      <input type="text" id="email" [(ngModel)]="loginDTO.email" />
+
+      <label for="password">Passwort:</label>
+      <input type="password" id="password" [(ngModel)]="loginDTO.password" />
+
+      <button (click)="login()">Login</button>
+    </div>
+  </mat-card>
+</div>
